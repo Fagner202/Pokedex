@@ -4,6 +4,28 @@
 }
 
 body {
-    background-color: #333;
+    /* background-color: #333; */
     /* color: red !important; */
+}
+
+#pokemon-cards {
+    border: solid 2px red;
+    /* display: grid; */
+}
+
+.card {
+    border: solid 2px blue;
+}
+
+/* Estilo para o container de cards */
+#pokemon-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribui os cards horizontalmente */
+}
+
+/* Estilo para cada card */
+.card {
+    width: calc(16.666% - 10px); /* Define a largura de cada card (1/6 da largura) com algum espaço entre eles */
+    margin-bottom: 10px; /* Espaço entre os cards na vertical */
 }
