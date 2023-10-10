@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Roboto', sans-serif;
+}
+
 .icon-moon {
     position: relative;
     font-size: 20px;
@@ -11,10 +19,14 @@ body {
 #pokemon-cards {
     border: solid 2px red;
     /* display: grid; */
+    justify-content: center;
+    text-align: center;
 }
 
 .card {
-    border: solid 2px blue;
+    /* border: solid 2px blue; */
+    background-color: #F2F2F2;
+    text-align: center;
 }
 
 /* Estilo para o container de cards */
@@ -28,4 +40,89 @@ body {
 .card {
     width: calc(16.666% - 10px); /* Define a largura de cada card (1/6 da largura) com algum espaço entre eles */
     margin-bottom: 10px; /* Espaço entre os cards na vertical */
+    margin: 10px;
+}
+
+.card-img-top {
+    border: solid 2px purple;
+    height: 100px;
+    width: 110px;
+    position: relative;
+    left: 30px;
+}
+
+.card-type {
+    border: solid 2px purple;
+}
+
+.card-title {
+    border: solid 2px purple;
+}
+
+.fire-type {
+    background-color: #FD7D24;
+}
+
+.grass-type {
+    background-color: #9BCC50;
+}
+
+.poison-type {
+    background-color: #B97FC9;
+}
+
+.flying-type {
+    background-color: #3DC7EF;
+}
+
+.bug-type {
+    background-color: #729F3F;
+}
+
+.water-type {
+    background-color: #4592C4;
+}
+
+.normal-type {
+    background-color: #A4ACAF;
+}
+
+.electric-type {
+    background-color: #EED535;
+}
+
+.ground-type {
+    background-color: #AB9842;
+}
+
+.fairy-type {
+    background-color: #FDB9E9;
+}
+
+.ice-type {
+    background-color: #51C4E7;
+}
+
+.psychic-type {
+    background-color: #F366B9;
+}
+
+.fighting-type {
+    background-color: #D56723;
+}
+
+.steel-type {
+    background-color: #9EB7B8;
+}
+
+.ghost-type {
+    background-color: #7B62A3;
+}
+
+.rock-type {
+    background-color: #A38C21;
+}
+
+.dragon-type {
+    background-color: #F16E57;
 }
