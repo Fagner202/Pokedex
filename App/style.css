@@ -55,6 +55,11 @@ body {
     border: solid 2px purple;
 }
 
+.card-type-container {
+    border: solid 2px black;
+    display: flex;
+}
+
 .card-title {
     border: solid 2px purple;
 }
