@@ -49,6 +49,19 @@
     margin-left: 1100px;
 }
 
+.icone {
+    font-size: 20px;
+    position: relative;
+    top: 5px;
+    color: white !important;
+}
+
+
+.icone:hover {
+    color: #333 !important;
+    transition: transform 0.1s; /* Adiciona uma transição suave */
+}
+
 .row {
     /* background-color: red; */
     position: relative;
