@@ -11,7 +11,7 @@
     <title>Pokedex</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav style="" class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">Seu Logo</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,18 +19,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link tema" href="#">Gen</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link tema" href="#">Items</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link tema" href="#">Pokebolas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link tema" href="#">Contato</a>
-                    </li>
                     <li class="nav-item ml-auto icon-moon" id="iconToggle"> <!-- Classe personalizada para mover o ícone mais para a esquerda -->
                         <a class="nav-link" href="#"><i class="fas fa-sun"></i></a> <!-- Usei "fas" para Font Awesome Solid -->
                     </li>
@@ -38,6 +26,22 @@
             </div>
         </div>
     </nav>
+
+    <div class="modal" id="pokemonModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Detalhes do Pokémon</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="pokemonName"></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div id="pokemon-card-container" class="container">
         <div class="row" id="pokemon-cards"></div>

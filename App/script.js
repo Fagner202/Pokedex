@@ -6,23 +6,24 @@ $(document).ready(function() {
             icon.removeClass("fa-sun").addClass("fa-moon");
             $(".navbar").removeClass("navbar-dark").addClass("navbar-light"); // Altera para o tema claro
             $(".navbar").removeClass("bg-light").addClass("bg-dark");
-            $(".navbar-brand").css("color", "white")
-            $(".tema").css("color", "white !important")
-            
+            $(".navbar-brand").css("color", "white");
+            $(".nav-link").removeClass("color-black").addClass("color-white");
+            $(".btn").removeClass("color-black").addClass("color-white");
         } else {
             console.log('Tema escuro');
             icon.removeClass("fa-moon").addClass("fa-sun");
             $(".navbar").removeClass("navbar-light").addClass("navbar-dark"); // Altera para o tema escuro
             $(".navbar").removeClass("bg-dark").addClass("bg-light");
-            $(".navbar-brand").css("color", "black")
-            $(".tema").css("color", "black !important")
-
+            $(".navbar-brand").css("color", "black");
+            $(".nav-link").removeClass("color-white").addClass("color-black");
+            $(".btn").removeClass("color-white").addClass("color-black");
         }
     });
 });
 
 $(document).ready(function () {
     const apiUrl = "https://pokeapi.co/api/v2/pokemon/";
+    const regionMenu = $("#regionMenu");
 
     // Função para mapear os tipos para classes CSS correspondentes
     function mapTypeToCssClass(type) {
@@ -95,7 +96,7 @@ $(document).ready(function () {
                     const types = pokemonData.types.map(function (typeData) {
                         return typeData.type.name;
                     });
-                    console.log(pokemonData.id);
+                    console.log(pokemonData);
     
                     // Criar o card do Pokémon com classes CSS baseadas nos tipos
                     const cardTypes = types.map(function (type) {
@@ -105,12 +106,12 @@ $(document).ready(function () {
     
                     const card = `
                         <div class="card" style="width: 13rem;">
-                            <div class="card-type-container" style="width: 60px;">
-                                ${cardTypes}
-                            </div>
                             <img src="${imageUrl}" class="card-img-top" alt="${name}">
                             <div class="card-body">
                                 <h5 class="card-title">${name}</h5>
+                            </div>
+                            <div class="card-type-container"">
+                                ${cardTypes}
                             </div>
                         </div>
                     `;
@@ -125,4 +126,34 @@ $(document).ready(function () {
 
     // Chamar a função para buscar e exibir os cards
     fetchAndDisplayPokemon();
+});
+
+$(document).ready(function () {
+    // ... Seu código existente ...
+
+    // Manipulador de eventos para abrir o modal quando um card é clicado
+    $("#pokemon-cards").on("click", ".card", function () {
+        const card = $(this);
+        const name = card.find(".card-title").text();
+        $("#pokemonName").text(name);
+        $("#pokemonModal").modal("show");
+    });
+
+    // ...
+});
+
+$(document).ready(function () {
+    // URL da API de Pokémon para obter as regiões
+    const apiUrl = "https://pokeapi.co/api/v2/region/";
+
+    // Seleciona o elemento onde as opções de região serão adicionadas
+    const regionMenu = $("#regionMenu");
+
+    // Faz a solicitação AJAX para obter as regiões de Pokémon
+    $.get(apiUrl, function (data) {
+        // Itera sobre as regiões e cria opções no dropdown
+        data.results.forEach(function (region) {
+            regionMenu.append(`<a class="dropdown-item" href="#">${region.name}</a>`);
+        });
+    });
 });

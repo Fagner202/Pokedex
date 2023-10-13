@@ -6,28 +6,45 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.navbar {
+    box-shadow: 1px 1px 1px 0px #888888;
+}
+
+.color-black {
+    color: black !important;
+}
+
+.color-white {
+    color: white !important;
+}
+
 .icon-moon {
     position: relative;
     font-size: 20px;
 }
 
-body {
-    /* background-color: #333; */
-    /* color: red !important; */
+.row {
+    /* background-color: red; */
+    margin-top: 10px;
 }
 
 #pokemon-cards {
-    border: solid 2px red;
-    /* display: grid; */
+    border: solid 2px black;
+    border-radius: 2px;
     justify-content: center;
     text-align: center;
 }
 
 .card {
-    /* border: solid 2px blue; */
     background-color: #F2F2F2;
     text-align: center;
 }
+
+.card:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do elemento */
+    transition: transform 0.1s; /* Adiciona uma transição suave */
+}
+
 
 /* Estilo para o container de cards */
 #pokemon-card-container {
@@ -44,24 +61,28 @@ body {
 }
 
 .card-img-top {
-    border: solid 2px purple;
+    border: solid 2px black;
+    border-radius: 2px;
     height: 100px;
     width: 110px;
     position: relative;
     left: 30px;
+    margin-top: 10px;
 }
 
 .card-type {
-    border: solid 2px purple;
+    border: solid 2px black;
+    border-radius: 2px;
 }
 
 .card-type-container {
-    border: solid 2px black;
-    display: flex;
+    /* border: solid 2px black; */
+    /* display: flex; */
 }
 
 .card-title {
-    border: solid 2px purple;
+    border: solid 2px black;
+    border-radius: 2px;
 }
 
 .fire-type {
