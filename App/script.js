@@ -4,19 +4,20 @@ $(document).ready(function() {
         if (icon.hasClass("fa-sun")) {
             console.log('Tema claro')
             icon.removeClass("fa-sun").addClass("fa-moon");
-            $(".navbar").removeClass("navbar-dark").addClass("navbar-light"); // Altera para o tema claro
-            $(".navbar").removeClass("bg-light").addClass("bg-dark");
-            $(".navbar-brand").css("color", "white");
-            $(".nav-link").removeClass("color-black").addClass("color-white");
             $(".btn").removeClass("color-black").addClass("color-white");
+            $("body").removeClass("background-white").addClass("background-black");
+            $(".card").removeClass("card").addClass("card-dark");
+            $(".card-img-top").removeClass("card-img-top").addClass("card-img-top-dark")
+            $(".pokemon-cards").removeClass("pokemon-cards").addClass("pokemon-cards-dark");
+
         } else {
             console.log('Tema escuro');
             icon.removeClass("fa-moon").addClass("fa-sun");
-            $(".navbar").removeClass("navbar-light").addClass("navbar-dark"); // Altera para o tema escuro
-            $(".navbar").removeClass("bg-dark").addClass("bg-light");
-            $(".navbar-brand").css("color", "black");
             $(".nav-link").removeClass("color-white").addClass("color-black");
             $(".btn").removeClass("color-white").addClass("color-black");
+            $("body").removeClass("background-black").addClass("background-white");
+            $(".card-dark").removeClass("card-dark").addClass("card");
+            $(".card-img-top-dark").removeClass("card-img-top-dark").addClass("card-img-top")
         }
     });
 });
